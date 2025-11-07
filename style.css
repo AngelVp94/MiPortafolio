@@ -274,18 +274,24 @@ body[data-theme="dark"] .theme-toggle__icon--moon {
 }
 
 .about-meta {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 6px;
+    font-size: 0.9rem;
+    word-wrap: break-word;     
+    overflow-wrap: break-word; 
 }
 
 .about-meta p {
     margin: 0;
-    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .about-meta a {
     color: var(--accent);
     font-weight: var(--fw-semibold);
+    text-decoration: none;
+    word-break: break-all; 
 }
 
 .about-meta a:hover {
@@ -626,18 +632,20 @@ body[data-theme="dark"] .hero-avatar {
 
 .instagram-body {
     display: flex;
-    align-items: center;
-    gap: 16px;
+    flex-direction: column;   
+    align-items: flex-start;  
+    text-align: justify;      
+    gap: 12px;
+    width: 100%;
 }
 
 .instagram-body img {
-    width: 96px;
-    height: 96px;
-    object-fit: contain;
-    border-radius: 24px;
-    background: rgba(15, 23, 42, 0.04);
-    padding: 6px;
-    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.05);
+    width: 100%;
+    max-width: 140px;         
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    margin: 0 auto;           
 }
 
 .contact-links {
@@ -824,4 +832,7 @@ body[data-theme="dark"] .footer::before {
     .primary-button {
         width: 100%;
     }
+}
+.icon-button[href*="facebook.com"] .icon-button__icon {
+    color: #1877F2; /* Azul oficial de Facebook */
 }
